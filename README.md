@@ -26,68 +26,39 @@
 
 ### (1) 패러데이의 전자기 유도 법칙
 ```latex
-\[
-\text{EMF} = - N \frac{d\Phi}{dt}
-\]
-\[
+\text{EMF} = -N \frac{d\Phi}{dt}
+
 \Phi = \int B_z \, dA \approx A B_z(z)
-\Rightarrow \text{EMF} = - N A \frac{dB_z}{dz} \frac{dz}{dt} = -N A \frac{dB_z}{dz} v
-\]```
+\Rightarrow \text{EMF} = -N A \frac{dB_z}{dz} v```
 
 ### (2) 자석 자기장 근사 (유한 원통자석 모델)
 ```latex
-\[
 B_z(z) = \frac{B_r}{2}\left(
-\frac{z+\frac{L}{2}}{\sqrt{(z+\frac{L}{2})^2 + R^2}}
--\frac{z-\frac{L}{2}}{\sqrt{(z-\frac{L}{2})^2 + R^2}}
+\frac{z + \frac{L}{2}}{\sqrt{(z + \frac{L}{2})^2 + R^2}}
+- \frac{z - \frac{L}{2}}{\sqrt{(z - \frac{L}{2})^2 + R^2}}
 \right)
-\]
-\[
-\frac{dB_z}{dz} = \frac{B_r R^2}{2}
-\left(
-\frac{1}{(z+\frac{L}{2})^2+R^2)^{3/2}} - 
-\frac{1}{(z-\frac{L}{2})^2+R^2)^{3/2}}
-\right)
-\]
 ```
 ### (3) 운동 방정식
 ```latex
-\[
-m\frac{dv}{dt} = mg - F_d - F_\text{lin} - F_\text{mag}
-\]
-\[
-F_d = \frac{1}{2}\rho C_d A v|v|,\quad F_\text{lin} = k_\text{lin} v
-\]
-\[
-\Rightarrow \frac{dv}{dt} = g - \frac{1}{2m}\rho C_d A v|v| - \frac{k_\text{lin}}{m}v - \frac{F_\text{mag}}{m}
-\]
+m\frac{dv}{dt} = mg - F_d - F_{\text{lin}} - F_{\text{mag}}
+
+F_d = \frac{1}{2}\rho C_d A v|v|, \quad F_{\text{lin}} = k_{\text{lin}}v
 ```
 ### (4) 회로 방정식 (Faraday–Lenz–Ohm law)
 ```latex
-\[
 L\frac{di}{dt} + Ri = \text{EMF}
-\]
-이를 암시적 오일러법(Implicit Euler) 으로 적분:
-\[
-i_{k} = \frac{i_{k-1} + \frac{\Delta t}{L}\text{EMF}_{k-1}}{1 + \frac{\Delta t}{L}R_\text{tot}}
-\]
+i_{k} = \frac{i_{k-1} + \frac{\Delta t}{L}\text{EMF}_{k-1}}
+{1 + \frac{\Delta t}{L}R_{\text{tot}}}
 ```
 ### (5) 렌츠힘 (자기 항력)
 에너지 보존식에서 유도:
 ```latex
-\[
-P_\text{mech} = F_\text{mag}v = P_\text{elec} = \text{EMF}\cdot i
-\Rightarrow F_\text{mag} = \frac{\text{EMF}\cdot i}{v}
-\]
+P_{\text{mech}} = F_{\text{mag}}v = P_{\text{elec}} = \text{EMF}\cdot i
+\Rightarrow F_{\text{mag}} = \frac{\text{EMF}\cdot i}{v}
 ```
 ### (6) 코일 인덕턴스 (Wheeler 근사)
 ```latex
-\[
-L(\text{μH}) \approx \frac{N^2 D^2}{18D + 40\ell}
-\]
-\[
-\text{또는} \quad L = 10^{-7} \frac{r^2 N^2}{9r + 10\ell} \quad [H]
-\]
+L(\mu H) \approx \frac{N^2 D^2}{18D + 40\ell}
 ```
 ---
 
@@ -99,7 +70,7 @@ pip install streamlit numpy pandas matplotlib
 pip install streamlit numpy pandas matplotlib
 streamlit run emf_lab_app_v2.py
 ```
-###인자(토글로 조작)
+####인자(토글로 조작)
 
 | **Category** | **Argument** | **Unit** | **Default** | **Description** |
 |---------------|--------------|-----------|--------------|-----------------|
@@ -123,10 +94,7 @@ streamlit run emf_lab_app_v2.py
 |  | `--results_dir` | - | `results` | Folder for results |
 | **Coil** | `--coil` | - | - | Coil definition string (multiple allowed) |
 
-### Example (multiple coils)
-```bash
---coil "N=800,R=0.012,L=0.012,z=0.5,name=C1,wire_d=0.0005,L_override=2e-4"
---coil "N=800,R=0.012,L=0.012,z=0.65,name=C2,wire_d=0.0005"
+
 
 ###출력되는 파일
 lab_run_timeseries.csv	t, z, v, EMF, 전류, 전압, 자기항력 등 시계열 데이터
