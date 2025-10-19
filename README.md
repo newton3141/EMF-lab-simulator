@@ -100,12 +100,14 @@ pip install streamlit numpy pandas matplotlib
 streamlit run emf_lab_app_v2.py
 
 ###인자(토글로 조작)
+구분	인자명	단위	기본값	설명
 Simulation	--h0	m	0.9	낙하 종료 높이
 	--z0	m	0.0	초기 위치
 	--v0	m/s	0.0	초기 속도
 	--t_max	s	1.5	시뮬레이션 시간
 	--dt	s	5e-4	시간 간격
 	--dt_sub	-	5	회로 적분 서브스텝 수
+
 | Magnet | --mag_m | kg | 0.025 | 자석 질량 |
 | | --mag_R | m | 0.006 | 자석 반경 |
 | | --mag_L | m | 0.010 | 자석 길이 |
