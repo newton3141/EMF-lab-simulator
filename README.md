@@ -93,3 +93,47 @@ L(\text{μH}) \approx \frac{N^2 D^2}{18D + 40\ell}
 pip install streamlit numpy pandas matplotlib
 pip install streamlit numpy pandas matplotlib
 streamlit run emf_lab_app_v2.py
+
+###인자(토글로 조작)
+Simulation	--h0	m	0.9	낙하 종료 높이
+	--z0	m	0.0	초기 위치
+	--v0	m/s	0.0	초기 속도
+	--t_max	s	1.5	시뮬레이션 시간
+	--dt	s	5e-4	시간 간격
+	--dt_sub	-	5	회로 적분 서브스텝 수
+| Magnet | --mag_m | kg | 0.025 | 자석 질량 |
+| | --mag_R | m | 0.006 | 자석 반경 |
+| | --mag_L | m | 0.010 | 자석 길이 |
+| | --Br | T | 1.2 | 잔류자속밀도 |
+
+| Environment | --rho | kg/m³ | 1.2 | 공기 밀도 |
+| | --cd | - | 0.6 | 항력계수 |
+| | --k_lin | N·s/m | 0.0 | 점성항 |
+| | --tube_R | m | 0.012 | 관 반경 |
+
+| Circuit | --mode | - | series | 회로 모드 (open 또는 series) |
+| | --R_load | Ω | 50 | 부하저항 |
+| | --voltage_unit | - | mV | 출력 전압 단위 |
+| | --results_dir | - | results | 저장 폴더 루트 |
+
+| Coil | --coil | - | - | 코일 설정 문자열 (여러 개 가능) |
+###출력되는 파일
+lab_run_timeseries.csv	t, z, v, EMF, 전류, 전압, 자기항력 등 시계열 데이터
+lab_run_peaks.csv	피크값 요약
+lab_run_plot_z.png	자석 위치 vs 시간
+lab_run_plot_v.png	자석 속도 vs 시간
+lab_run_plot_emf.png	유도기전력 그래프
+lab_run_plot_vmeas.png	부하전압 (V 또는 mV)
+lab_run_plot_Fmag.png	자기항력(렌츠힘)
+lab_run_plot_schematic.png	코일–자석 배치도
+
+
+###사용 자료 출처
+진공 투자율	μ₀	4π×10⁻⁷ H/m	NIST CODATA (2019)
+구리 비저항	ρ₍Cu₎	1.68×10⁻⁸ Ω·m	NIST Material Data
+공기 밀도	ρ	1.2 kg/m³	20 °C, 해면 기준
+중력 가속도	g	9.80665 m/s²	국제 중력 기준값
+항력계수	C_d	0.5 ~ 0.7 (원통형)	NASA Glenn Research Center
+네오디뮴 잔류자속밀도	B_r	1.0 ~ 1.48 T	Stanford Magnets, Arnold Magnetics
+온도계수(Br)	α_T	–0.08 ~ –0.12 %/°C	Stanford Magnets
+솔레노이드 인덕턴스	L	Wheeler 식	H.A. Wheeler, Proc. IRE (1928)
