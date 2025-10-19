@@ -32,9 +32,10 @@
 \[
 \Phi = \int B_z \, dA \approx A B_z(z)
 \Rightarrow \text{EMF} = - N A \frac{dB_z}{dz} \frac{dz}{dt} = -N A \frac{dB_z}{dz} v
-\]
+\]```
 
 ### (2) 자석 자기장 근사 (유한 원통자석 모델)
+```latex
 \[
 B_z(z) = \frac{B_r}{2}\left(
 \frac{z+\frac{L}{2}}{\sqrt{(z+\frac{L}{2})^2 + R^2}}
@@ -48,8 +49,9 @@ B_z(z) = \frac{B_r}{2}\left(
 \frac{1}{(z-\frac{L}{2})^2+R^2)^{3/2}}
 \right)
 \]
-
+```
 ### (3) 운동 방정식
+```latex
 \[
 m\frac{dv}{dt} = mg - F_d - F_\text{lin} - F_\text{mag}
 \]
@@ -59,8 +61,9 @@ F_d = \frac{1}{2}\rho C_d A v|v|,\quad F_\text{lin} = k_\text{lin} v
 \[
 \Rightarrow \frac{dv}{dt} = g - \frac{1}{2m}\rho C_d A v|v| - \frac{k_\text{lin}}{m}v - \frac{F_\text{mag}}{m}
 \]
-
+```
 ### (4) 회로 방정식 (Faraday–Lenz–Ohm law)
+```latex
 \[
 L\frac{di}{dt} + Ri = \text{EMF}
 \]
@@ -68,22 +71,24 @@ L\frac{di}{dt} + Ri = \text{EMF}
 \[
 i_{k} = \frac{i_{k-1} + \frac{\Delta t}{L}\text{EMF}_{k-1}}{1 + \frac{\Delta t}{L}R_\text{tot}}
 \]
-
+```
 ### (5) 렌츠힘 (자기 항력)
 에너지 보존식에서 유도:
+```latex
 \[
 P_\text{mech} = F_\text{mag}v = P_\text{elec} = \text{EMF}\cdot i
 \Rightarrow F_\text{mag} = \frac{\text{EMF}\cdot i}{v}
 \]
-
+```
 ### (6) 코일 인덕턴스 (Wheeler 근사)
+```latex
 \[
 L(\text{μH}) \approx \frac{N^2 D^2}{18D + 40\ell}
 \]
 \[
 \text{또는} \quad L = 10^{-7} \frac{r^2 N^2}{9r + 10\ell} \quad [H]
 \]
-
+```
 ---
 
 ## 3. 설치 및 실행
