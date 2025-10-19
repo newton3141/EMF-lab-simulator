@@ -23,14 +23,14 @@
 ---
 
 ## 2. 물리 이론 요약
----
+
 ### (1) 패러데이의 전자기 유도 법칙
 $
 \text{EMF} = -N \frac{d\Phi}{dt}
 \Phi = \int B_z \, dA \approx A B_z(z)
 \Rightarrow \text{EMF} = -N A \frac{dB_z}{dz} v
 $
----
+
 ### (2) 자석 자기장 근사 (유한 원통자석 모델)
 $
 B_z(z) = \frac{B_r}{2}\left(
