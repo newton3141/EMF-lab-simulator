@@ -100,30 +100,34 @@ pip install streamlit numpy pandas matplotlib
 streamlit run emf_lab_app_v2.py
 
 ###인자(토글로 조작)
-구분	인자명	단위	기본값	설명
-Simulation	--h0	m	0.9	낙하 종료 높이
-	--z0	m	0.0	초기 위치
-	--v0	m/s	0.0	초기 속도
-	--t_max	s	1.5	시뮬레이션 시간
-	--dt	s	5e-4	시간 간격
-	--dt_sub	-	5	회로 적분 서브스텝 수
 
-| Magnet | --mag_m | kg | 0.025 | 자석 질량 |
-| | --mag_R | m | 0.006 | 자석 반경 |
-| | --mag_L | m | 0.010 | 자석 길이 |
-| | --Br | T | 1.2 | 잔류자속밀도 |
+| **Category** | **Argument** | **Unit** | **Default** | **Description** |
+|---------------|--------------|-----------|--------------|-----------------|
+| **Simulation** | `--h0` | m | 0.9 | Drop height (tube length) |
+|  | `--z0` | m | 0.0 | Initial position |
+|  | `--v0` | m/s | 0.0 | Initial velocity |
+|  | `--t_max` | s | 1.5 | Total simulation time |
+|  | `--dt` | s | 5e-4 | Time step size |
+|  | `--dt_sub` | - | 5 | Number of substeps for RL integration |
+| **Magnet** | `--mag_m` | kg | 0.025 | Magnet mass |
+|  | `--mag_R` | m | 0.006 | Magnet radius |
+|  | `--mag_L` | m | 0.010 | Magnet length |
+|  | `--Br` | T | 1.2 | Residual flux density (magnet strength) |
+| **Environment** | `--rho` | kg/m³ | 1.2 | Air density |
+|  | `--cd` | - | 0.6 | Drag coefficient |
+|  | `--k_lin` | N·s/m | 0.0 | Linear viscous damping constant |
+|  | `--tube_R` | m | 0.012 | Tube inner radius |
+| **Circuit** | `--mode` | - | `series` | Circuit type (`open` or `series`) |
+|  | `--R_load` | Ω | 50 | Load resistance |
+|  | `--voltage_unit` | - | `mV` | Voltage output unit |
+|  | `--results_dir` | - | `results` | Folder for results |
+| **Coil** | `--coil` | - | - | Coil definition string (multiple allowed) |
 
-| Environment | --rho | kg/m³ | 1.2 | 공기 밀도 |
-| | --cd | - | 0.6 | 항력계수 |
-| | --k_lin | N·s/m | 0.0 | 점성항 |
-| | --tube_R | m | 0.012 | 관 반경 |
+### Example (multiple coils)
+```bash
+--coil "N=800,R=0.012,L=0.012,z=0.5,name=C1,wire_d=0.0005,L_override=2e-4"
+--coil "N=800,R=0.012,L=0.012,z=0.65,name=C2,wire_d=0.0005"
 
-| Circuit | --mode | - | series | 회로 모드 (open 또는 series) |
-| | --R_load | Ω | 50 | 부하저항 |
-| | --voltage_unit | - | mV | 출력 전압 단위 |
-| | --results_dir | - | results | 저장 폴더 루트 |
-
-| Coil | --coil | - | - | 코일 설정 문자열 (여러 개 가능) |
 ###출력되는 파일
 lab_run_timeseries.csv	t, z, v, EMF, 전류, 전압, 자기항력 등 시계열 데이터
 lab_run_peaks.csv	피크값 요약
