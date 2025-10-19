@@ -98,7 +98,7 @@ L(\text{μH}) \approx \frac{N^2 D^2}{18D + 40\ell}
 pip install streamlit numpy pandas matplotlib
 pip install streamlit numpy pandas matplotlib
 streamlit run emf_lab_app_v2.py
-
+```
 ###인자(토글로 조작)
 
 | **Category** | **Argument** | **Unit** | **Default** | **Description** |
