@@ -78,9 +78,9 @@ streamlit run emf_lab_app_v2.py
 |  | `--voltage_unit` | - | `mV` | Voltage output unit |
 |  | `--results_dir` | - | `results` | Folder for results |
 | **Coil** | `--coil` | - | - | Coil definition string (multiple allowed) |
+```
 
-
-
+```
 ###출력되는 파일
 lab_run_timeseries.csv		t, z, v, EMF, 전류, 전압, 자기항력 등 시계열 데이터
 lab_run_peaks.csv		피크값 요약
