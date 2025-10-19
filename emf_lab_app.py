@@ -1,6 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-# EMF Lab Simulator (GUI): Streamlit app with full widget control and Run button
+
 
 import math, os, io, shutil, zipfile
 from dataclasses import dataclass
@@ -14,7 +12,7 @@ import streamlit as st
 
 RHO_CU = 1.68e-8
 
-# ------------------ Core models (same physics as v4) ------------------
+
 
 @dataclass
 class Magnet:
@@ -204,11 +202,11 @@ def run_once(h0,z0,v0,t_max,dt,dt_sub,mag,env,coils,mode,R_load,results_root="re
 
     return save_dir, root+"_timeseries.csv", root+"_plot_emf.png", root+"_plot_Fmag.png"
 
-# ------------------ Streamlit UI ------------------
+
 
 st.set_page_config(page_title="EMF Lab Simulator (GUI)", layout="wide")
 
-st.title("🧲 EMF Lab Simulator (GUI)")
+st.title("EMF Lab Simulator (GUI)")
 st.caption("낙하 자석–코일 유도 실험을 GUI로 제어하고, 결과를 폴더에 자동 저장합니다.")
 
 with st.sidebar:
