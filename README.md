@@ -1,6 +1,6 @@
 # EMF-lab-simulator
 
-# 🧲 EMF Lab Simulator (v4.1, 수행평가 제출용)
+# EMF Lab Simulator (v4.1, 수행평가 제출용)
 **Electronic Induction and Lenz Force Numerical Simulator**  
 *Developer: Aiden Jung 정윤서 (Seoul Science High School, 2025)*
 
