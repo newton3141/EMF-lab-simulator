@@ -1,20 +1,20 @@
 # EMF-lab-simulator
 
-# 🧲 EMF Lab Simulator (v4.1)
+# 🧲 EMF Lab Simulator (v4.1, 수행평가 제출용)
 **Electronic Induction and Lenz Force Numerical Simulator**  
-*Developer: Aiden 정윤서 (Seoul Science High School, 2025)*
+*Developer: Aiden Jung 정윤서 (Seoul Science High School, 2025)*
 
 ---
 
 ## 1. 개요
 
-이 프로그램은 **자석 낙하 실험(패러데이 전자기 유도 법칙 검증)** 을 컴퓨터 상에서 수치적으로 재현하는 시뮬레이터이다.  
-**네오디뮴 자석**이 **솔레노이드 코일**을 통과할 때 발생하는 **유도기전력(EMF)**, **렌츠힘(Lenz Force)**, **속도 변화**, **낙하 시간** 등을 계산하여  
+이 프로그램은 자석 낙하 실험(패러데이 전자기 유도 법칙 검증) 을 컴퓨터 상에서 수치적으로 재현하는 시뮬레이터이다.  
+네오디뮴 자석이 솔레노이드 코일을 통과할 때 발생하는 유도기전력(EMF), 렌츠힘(Lenz Force), 속도 변화, 낙하 시간 등을 계산하여  
 실제 실험에서 얻은 오실로스코프 파형과 비교·검증할 수 있다.
 
-- **목적**: 실험 오차의 원인을 정량적으로 분석  
-- **활용**: 수행평가 보고서, 오차 계산, 시각화 시뮬레이션  
-- **특징**
+- 목적: 실험 오차의 원인을 정량적으로 분석  
+- 활용: 수행평가 보고서, 오차 계산, 시각화 시뮬레이션  
+- 특징
   - 현실 파라미터 기반 (코일, 자석, 공기저항, 부하저항 등)
   - 안정적인 암시적 회로 적분법(Implicit Euler)
   - 자동 폴더·시간명 저장, 렌츠힘 계산, mV 단위 지원
@@ -63,7 +63,7 @@ F_d = \frac{1}{2}\rho C_d A v|v|,\quad F_\text{lin} = k_\text{lin} v
 \[
 L\frac{di}{dt} + Ri = \text{EMF}
 \]
-이를 **암시적 오일러법(Implicit Euler)** 으로 적분:
+이를 암시적 오일러법(Implicit Euler) 으로 적분:
 \[
 i_{k} = \frac{i_{k-1} + \frac{\Delta t}{L}\text{EMF}_{k-1}}{1 + \frac{\Delta t}{L}R_\text{tot}}
 \]
@@ -89,6 +89,6 @@ L(\text{μH}) \approx \frac{N^2 D^2}{18D + 40\ell}
 
 ### CLI 버전
 ```bash
-pip install numpy pandas matplotlib
-python emf_lab_sim_pro_v4_1.py --mode series --R_load 50 --voltage_unit mV ^
-  --coil "N=800,R=0.012,L=0.012,z=0.5,name=C1,wire_d=0.0005,L_override=2e-4"
+pip install streamlit numpy pandas matplotlib
+pip install streamlit numpy pandas matplotlib
+streamlit run emf_lab_app_v2.py
