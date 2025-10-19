@@ -25,41 +25,41 @@
 ## 2. 물리 이론 요약
 
 ### (1) 패러데이의 전자기 유도 법칙
-$$
+$
 \text{EMF} = -N \frac{d\Phi}{dt}
 
 \Phi = \int B_z \, dA \approx A B_z(z)
 \Rightarrow \text{EMF} = -N A \frac{dB_z}{dz} v
-$$
+$
 ### (2) 자석 자기장 근사 (유한 원통자석 모델)
-$$
+$
 B_z(z) = \frac{B_r}{2}\left(
 \frac{z + \frac{L}{2}}{\sqrt{(z + \frac{L}{2})^2 + R^2}}
 - \frac{z - \frac{L}{2}}{\sqrt{(z - \frac{L}{2})^2 + R^2}}
 \right)
-$$
+$
 ### (3) 운동 방정식
-$$
+$
 m\frac{dv}{dt} = mg - F_d - F_{\text{lin}} - F_{\text{mag}}
 
 F_d = \frac{1}{2}\rho C_d A v|v|, \quad F_{\text{lin}} = k_{\text{lin}}v
-$$
+$
 ### (4) 회로 방정식 (Faraday–Lenz–Ohm law)
-$$
+$
 L\frac{di}{dt} + Ri = \text{EMF}
 i_{k} = \frac{i_{k-1} + \frac{\Delta t}{L}\text{EMF}_{k-1}}
 {1 + \frac{\Delta t}{L}R_{\text{tot}}}
-$$
+$
 ### (5) 렌츠힘 (자기 항력)
 에너지 보존식에서 유도:
-$$
+$
 P_{\text{mech}} = F_{\text{mag}}v = P_{\text{elec}} = \text{EMF}\cdot i
 \Rightarrow F_{\text{mag}} = \frac{\text{EMF}\cdot i}{v}
-$$
+$
 ### (6) 코일 인덕턴스 (Wheeler 근사)
-$$
+$
 L(\mu H) \approx \frac{N^2 D^2}{18D + 40\ell}
-$$
+$
 ---
 
 ## 3. 설치 및 실행
