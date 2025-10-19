@@ -81,50 +81,28 @@ streamlit run emf_lab_app_v2.py
 ---
 
 
-<h3>📁 출력 파일 목록</h3>
+###  출력 파일 목록
+| 파일명 | 설명 |
+|:--|:--|
+| **lab_run_timeseries.csv** | `t, z, v, EMF, 전류, 전압, 자기항력` 등 시계열 데이터 |
+| **lab_run_peaks.csv** | 피크값 요약 |
+| **lab_run_plot_z.png** | 자석 위치 vs 시간 그래프 |
+| **lab_run_plot_v.png** | 자석 속도 vs 시간 그래프 |
+| **lab_run_plot_emf.png** | 유도기전력(EMF) 그래프 |
+| **lab_run_plot_vmeas.png** | 부하전압(V 또는 mV) 그래프 |
+| **lab_run_plot_Fmag.png** | 자기항력(렌츠힘) 그래프 |
+| **lab_run_plot_schematic.png** | 코일–자석 배치도 |
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left;">파일명</th>
-      <th style="text-align:left;">설명</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td><b>lab_run_timeseries.csv</b></td><td><code>t, z, v, EMF, 전류, 전압, 자기항력</code> 등 시계열 데이터</td></tr>
-    <tr><td><b>lab_run_peaks.csv</b></td><td>피크값 요약</td></tr>
-    <tr><td><b>lab_run_plot_z.png</b></td><td>자석 위치 vs 시간 그래프</td></tr>
-    <tr><td><b>lab_run_plot_v.png</b></td><td>자석 속도 vs 시간 그래프</td></tr>
-    <tr><td><b>lab_run_plot_emf.png</b></td><td>유도기전력(EMF) 그래프</td></tr>
-    <tr><td><b>lab_run_plot_vmeas.png</b></td><td>부하전압(V 또는 mV) 그래프</td></tr>
-    <tr><td><b>lab_run_plot_Fmag.png</b></td><td>자기항력(렌츠힘) 그래프</td></tr>
-    <tr><td><b>lab_run_plot_schematic.png</b></td><td>코일–자석 배치도</td></tr>
-  </tbody>
-</table>
+---
 
-<hr>
-
-<h3>📚 사용 자료 출처</h3>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left;">항목</th>
-      <th style="text-align:center;">기호</th>
-      <th style="text-align:left;">값 / 범위</th>
-      <th style="text-align:left;">출처</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td>진공 투자율</td><td style="text-align:center;">μ₀</td><td>4π×10⁻⁷ H/m</td><td>NIST CODATA (2019)</td></tr>
-    <tr><td>구리 비저항</td><td style="text-align:center;">ρ₍Cu₎</td><td>1.68×10⁻⁸ Ω·m</td><td>NIST Material Data</td></tr>
-    <tr><td>공기 밀도</td><td style="text-align:center;">ρ</td><td>1.2 kg/m³ (20 °C, 해면 기준)</td><td>국제 표준값</td></tr>
-    <tr><td>중력 가속도</td><td style="text-align:center;">g</td><td>9.80665 m/s²</td><td>국제 중력 기준값</td></tr>
-    <tr><td>항력계수</td><td style="text-align:center;">C<sub>d</sub></td><td>0.5 ~ 0.7 (원통형)</td><td>NASA Glenn Research Center</td></tr>
-    <tr><td>네오디뮴 잔류자속밀도</td><td style="text-align:center;">B<sub>r</sub></td><td>1.0 ~ 1.48 T</td><td>Stanford Magnets, Arnold Magnetics</td></tr>
-    <tr><td>온도계수 (Br)</td><td style="text-align:center;">α<sub>T</sub></td><td>–0.08 ~ –0.12 % / °C</td><td>Stanford Magnets</td></tr>
-    <tr><td>솔레노이드 인덕턴스</td><td style="text-align:center;">L</td><td>Wheeler 식</td><td>H.A. Wheeler, <i>Proc. IRE</i> (1928)</td></tr>
-  </tbody>
-</table>
-
-
+###  사용 자료 출처
+| 항목 | 기호 | 값 / 범위 | 출처 |
+|:--|:--:|:--|:--|
+| 진공 투자율 | μ₀ | 4π×10⁻⁷ H/m | NIST CODATA (2019) |
+| 구리 비저항 | ρ₍Cu₎ | 1.68×10⁻⁸ Ω·m | NIST Material Data |
+| 공기 밀도 | ρ | 1.2 kg/m³ (20 °C, 해면 기준) | 국제 표준값 |
+| 중력 가속도 | g | 9.80665 m/s² | 국제 중력 기준값 |
+| 항력계수 | C_d | 0.5 ~ 0.7 (원통형) | NASA Glenn Research Center |
+| 네오디뮴 잔류자속밀도 | B_r | 1.0 ~ 1.48 T | Stanford Magnets, Arnold Magnetics |
+| 온도계수 (Br) | α_T | –0.08 ~ –0.12 %/°C | Stanford Magnets |
+| 솔레노이드 인덕턴스 | L | Wheeler 식 | H.A. Wheeler, *Proc. IRE* (1928) |
