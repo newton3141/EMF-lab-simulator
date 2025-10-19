@@ -78,9 +78,9 @@ streamlit run emf_lab_app_v2.py
 |  | `--voltage_unit` | - | `mV` | Voltage output unit |
 |  | `--results_dir` | - | `results` | Folder for results |
 | **Coil** | `--coil` | - | - | Coil definition string (multiple allowed) |
-```
+---
 
-```
+
 ###출력되는 파일
 lab_run_timeseries.csv		t, z, v, EMF, 전류, 전압, 자기항력 등 시계열 데이터
 lab_run_peaks.csv		피크값 요약
@@ -90,7 +90,7 @@ lab_run_plot_emf.png		유도기전력 그래프
 lab_run_plot_vmeas.png		부하전압 (V 또는 mV)
 lab_run_plot_Fmag.png		자기항력(렌츠힘)
 lab_run_plot_schematic.png	코일–자석 배치도
-
+---
 
 ###사용 자료 출처
 진공 투자율	μ₀	4π×10⁻⁷ H/m	NIST CODATA (2019)
@@ -101,3 +101,4 @@ lab_run_plot_schematic.png	코일–자석 배치도
 네오디뮴 잔류자속밀도	B_r	1.0 ~ 1.48 T	Stanford Magnets, Arnold Magnetics
 온도계수(Br)	α_T	–0.08 ~ –0.12 %/°C	Stanford Magnets
 솔레노이드 인덕턴스	L	Wheeler 식	H.A. Wheeler, Proc. IRE (1928)
+---
